@@ -22,9 +22,9 @@ class MyAdapter(val list: List<MainActivity.itemListt>):
         holder.imageView.imageView2
 
 
-//        var color = "#FFFFFF"
-//        if (position % 2 == 0) { color = "#CCCCCC"}
-//            holder.LayoutColor.setBackgroundColor(Color.parseColor(color))
+       var color = "#FFFFFF"
+       if (position % 2 == 0) { color = "#CCCCCC"}
+           holder.LayoutColor.setBackgroundColor(Color.parseColor(color))
     }
 
     override fun getItemCount(): Int {
@@ -35,6 +35,6 @@ class MyAdapter(val list: List<MainActivity.itemListt>):
         val textName = itemView.txtName
         val textMessage = itemView.Message
         val imageView = itemView.imageView2
-//        val LayoutColor = itemView.LayoutId
+       val LayoutColor = itemView.LayoutId
     }
 }
