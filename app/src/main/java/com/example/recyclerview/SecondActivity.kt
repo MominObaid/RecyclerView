@@ -10,14 +10,15 @@ import com.example.recyclerview.databinding.ActivitySecondBinding
 import java.io.File
 
 class SecondActivity : AppCompatActivity(){
+    private lateinit var binding : ActivitySecondBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        val binding = ActivitySecondBinding.inflate(LayoutInflater.from(parent))
-        setContentView(R.layout.activity_second)
+        binding = ActivitySecondBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val AddName = findViewById<EditText>(R.id.ET_Name)
-        val AddDetails = findViewById<EditText>(R.id.ET_Details)
-        val AddbtnData = findViewById<Button>(R.id.btnAdd)
+        val AddName = binding.ET_Name
+        val AddDetails = binding.ET_Details
+        val AddbtnData = binding.btnAdd
 
 
         AddbtnData.setOnClickListener{
