@@ -7,21 +7,20 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding : ActivityMain2Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        binding = ActivityMain2Binding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-
-        val MainList = findViewById<RecyclerView>(R.id.listView)
+        val MainList = binding.listView
         MainList.adapter = MyAdapter(itemList)
         MainList.layoutManager = LinearLayoutManager(this)
 
     }
 
     val itemList = listOf<itemListt>(
-        itemListt(
-            "Tom", "New Message"
-        ),
+        itemListt("Tom", "New Message"),
         itemListt ("Sam", "Student"),
         itemListt("Tim", "Student", ),
         itemListt("Alex", "Employee"),
@@ -30,14 +29,12 @@ class MainActivity : AppCompatActivity() {
         itemListt("ghi", "age"),
         itemListt("jkl", "bbbbb"),
         itemListt("bbbbb", "ccccc"),
-    itemListt("ccccc","zzzzzzzz")
+        itemListt("ccccc","zzzzzzzz")
     )
 
     data class itemListt(
         var Name: String,
         var Detail: String,
-//        var Image: ImageView
     )
-
 }
 
