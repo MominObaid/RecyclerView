@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    val itemList = listOf<itemListt>(
+    val itemList = mutibleListOf<itemListt>(
         itemListt("Tom", "New Message"),
         itemListt ("Sam", "Student"),
         itemListt("Tim", "Student", ),
